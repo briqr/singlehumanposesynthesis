@@ -1,0 +1,27 @@
+data:
+  {
+root_path: '/media/datasets/pose_estimation/MSCOCO_2017',
+annotation_path: 'data/coco',
+num_keypoints: 17
+}
+
+train:
+  {
+    batch_size: 16,
+    resolution: 128
+
+  }
+model:
+  {
+    text:
+      {
+            checkpoint: '/media/datasets_local/posesyn/fasttext/wiki.en.bin'
+    },
+    gan:
+      {
+          model_path: '/media/person_image_syn/models/images/' #'/media/datasets/briq/human_image_synthesis/models/densepose'
+
+          #checkpoint_path: '/media/human_image_synthesis/models/'
+    }
+  }
+
